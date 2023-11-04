@@ -1,0 +1,100 @@
+student: !!seq
+  - marks
+  - name
+  - roll_no
+
+#can write like this also
+student: [marks, name, roll_no]
+
+#some of the keys ofthe seq can be empty, that is called as:
+#sparse seq
+sparse seq:
+ - hi
+ - hello
+ - 
+ - Null
+ - sup
+
+# nested sequence
+-
+ - karthi
+ - vijay
+ - suriya
+ - Raj
+ - Anu
+-
+ - kaithi
+ - master
+ - ayan
+ - DSA
+ - Bigtech
+
+#key: value pairs are called maps
+!!map
+
+#nested mappings: map within a map
+name: Harish
+role:
+  age: 18
+  job: student
+
+#same as
+name: Harish
+role: {age: 18, job: student}
+
+#pairs: keys may have duplicate values
+#!!pairs
+pair example: !!pairs
+ - job: student
+ - job: teacher
+#same as
+pair example: !!pairs [job: student, job: teacher]
+# this will be an array of hashtables
+
+#!!set will allow you to have only unique values
+names: !!set
+ ? Harish
+ ? Karthi
+ ? Kamal
+
+ # dictionary !!omap
+ people: !!omap
+  - Harish:
+      name: Harish
+      age: 18
+      height: 175
+  - Karthi:
+      name: Karthi
+      age: 38
+      height: 169
+
+#reusing some properties using anchors
+likings: &likes
+  fav fruit: pineapple
+  dislikes: games
+
+person1:
+  name: Harish
+  fav fruit: pineapple
+  dislikes: games
+
+#people1 can be eassily written using anchor like this
+person1:
+  name: Harish
+  <<: *likes
+
+person2:
+  name: Rahul
+  <<: *likes
+  dislikes: books    #everything are copied and dislikes portion is overided(rewritten).
+
+#internally people2 is written as:
+person2:
+  name: Rahul
+  fav fruit: pineapple
+  dislikes: books
+
+person3:
+  name: Apoorv
+  fav fruit: mango
+  dislikes: songs

@@ -1,0 +1,21 @@
+{
+    "School": [
+        {
+            "name": "GP",
+            "principal": "Someone",
+            "Students":[
+                {
+                    "rno": 11,
+                    "name": "Harish Raj",
+                    "marks": 84
+                }
+            ]
+        }
+    ]
+}
+
+/*
+Difference between [] and {};
+[] - this represents collection;
+{} - this represents an entity;
+*/

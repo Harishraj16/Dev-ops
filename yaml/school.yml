@@ -1,0 +1,8 @@
+---
+School:
+  - name: Gp
+    principal: Someone
+    Students:
+      - rno: 11,
+        name: Harish,
+        marks: 84

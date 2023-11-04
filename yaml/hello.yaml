@@ -1,0 +1,23 @@
+#yaml is case sensitive "apple" & "Apple" are different
+#Indentation is important in YAMl like in python
+
+"apple": "I am a red fruit"
+11: "This is Harish Roll number"
+---
+#lists
+- apple
+- banana
+- mango
+- Apple
+---
+films:
+  - Kaidhi
+  - Ka Ka Po
+  - Nayagan
+  - Jersey
+  - Master
+---
+cities: [chennai, mumbai, hyderabad]
+---
+{mango: "yellow fruit", num: 5}
+......

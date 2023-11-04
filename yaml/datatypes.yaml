@@ -1,0 +1,49 @@
+name: Harish Raj
+name: "harish"
+name: 'harish'
+
+#these all are string variables however you can write
+
+bio: |
+hey this is Harish Selva.
+I am striving to become a decent techie.
+
+#internally writen as single line in as we can write in multiple lines
+message: >
+I am sorry for writing 
+such a long letter I didn't
+have time to write a short one!
+- Mark Twain
+#these 4 lines will be taken as a single line
+
+
+#YAML right now automatically detect what datatype these are!
+number: 1768
+marks: 97.50
+booleanValue: !!bool No  #n, N, false, FALSE
+#same for true ->  yes, y, Y, true, TRUE
+
+# specify the type
+zero: !!int 0
+posNum: !!int 17
+negNum: !!int -11
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexaNum: !!int 0x45
+commaValue: !!int +540_000  #540,000
+exponential numbers: 6.023E56
+String: !!str harish
+
+# floating point numbers
+marks: !!float 95.50
+infinite: !!float .inf
+not a num: .nan
+
+# null
+surname: !!null Null # or null NULL ~ 
+~: this ia a null key
+
+#dates and time
+date: 2002-12-14 
+india time: 2001-12-15T02:59:43.10 +5:30
+no time zone: 2001-12-15T02:59:43.10 
