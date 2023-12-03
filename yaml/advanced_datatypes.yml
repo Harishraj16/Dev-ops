@@ -6,7 +6,7 @@ student: !!seq
 #can write like this also
 student: [marks, name, roll_no]
 
-#some of the keys ofthe seq can be empty, that is called as:
+#some of the keys of the seq can be empty, that is called as:
 #sparse seq
 sparse seq:
  - hi
